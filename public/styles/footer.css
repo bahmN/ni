@@ -1,0 +1,31 @@
+.footer {
+    height: 40px;
+
+    margin-top: 30px;
+
+    background-color: var(--main-text-color);
+}
+
+.footer__container {
+    display: flex;
+}
+
+.footer__container p {
+    flex: 1;
+
+    margin-top: 10px;
+    margin-left: 185px;
+    text-align: center;
+    font-family: 'Geist-semi-bold', sans-serif;
+
+    color: var(--second-text-color);
+}
+
+.footer__container--links {
+    display: flex;
+
+    margin-top: 5px;
+    margin-right: 120px;
+
+    gap: 15px;
+}

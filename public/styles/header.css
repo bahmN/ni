@@ -1,0 +1,30 @@
+.header {
+    width: 90%;
+
+    margin: 0 auto;
+
+    border-bottom: 1px solid var(--main-text-color);
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 5px 50px;
+}
+
+.header__container--links {
+    display: flex;
+    gap: 90px;
+}
+
+.header__container--links a {
+    transition: 0.5s ease-in-out;
+}
+
+
+.header__container--links a:hover {
+    scale: 1.1;
+    color: var(--second-text-color);
+}
