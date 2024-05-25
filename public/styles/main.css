@@ -3,6 +3,8 @@
     flex-direction: column;
 
     gap: 40px;
+
+    margin-bottom: 40px;
 }
 
 .main__greeting {
@@ -30,14 +32,17 @@
 }
 
 .main__about_container {
-    margin-top: 40px;
+    display: flex;
+
     text-align: center;
+    justify-content: center;
+
+    margin-top: 40px;
 }
 
 .main__about_container--item {
-    display: inline-block;
+    height: 90px;
 
-    height: 90;
     padding: 20px;
     margin: 0 20px;
 
@@ -183,4 +188,73 @@
     background-color: var(--blocks-bg-color);
 
     border: 2px solid var(--second-text-color);
+}
+
+
+@media (max-width: 1300px) {
+    .main__about_container {
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 830px) {
+    .main {
+        gap: 20px;
+    }
+
+    .main__greeting--typewritter,
+    .main--title {
+        font-size: 22px;
+    }
+
+    .main__about_container {
+        grid-template-columns: none;
+
+        gap: 15px;
+
+        margin-top: 20px;
+
+
+    }
+
+    .main__about_container--item {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 615px) {
+    .main__greeting {
+        height: 130px;
+
+        margin-top: 20px;
+    }
+
+    .form-group,
+    .main__request--form .form-group input,
+    .main__request--form .form-group textarea,
+    .main__request--form button {
+        width: 250px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main--title {
+        font-size: 18px;
+    }
+
+    .main .main__greeting {
+        height: 60px;
+
+        margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .main__greeting--typewritter {
+        font-size: 18px;
+
+    }
 }

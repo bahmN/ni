@@ -28,3 +28,14 @@
     scale: 1.1;
     color: var(--second-text-color);
 }
+
+@media (max-width: 830px) {
+    .header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header__container--links {
+        display: none;
+    }
+}
