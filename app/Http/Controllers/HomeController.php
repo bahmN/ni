@@ -10,7 +10,22 @@ class HomeController extends Controller {
     }
 
     public function sendRequest(Request $request) {
-        mail('ivn.moneta@gmail.com', 'Тема письма', 'Текст письма', 'From: iwanaev23@gmail.com');
+        $message = "*Новая заявка*\n*От кого:* {$request['name']}\n*email:* {$request['email']}\n*Описание заказа:* {$request['details']}";
+        $website = 'https://api.telegram.org/bot' . env('TELEGRAM_TOKEN', '');
+        $params = [
+            'chat_id' => 255499895,
+            'parse_mode' => 'markdown',
+            'text' => $message,
+        ];
+
+        $ch = curl_init($website . '/sendMessage');
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_close($ch);
+
         return redirect()->route('home');
     }
 }
