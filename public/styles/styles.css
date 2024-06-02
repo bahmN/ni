@@ -1,7 +1,8 @@
 @import url('normalize.css');
 @import url('fonts.css');
 @import url('header.css');
-@import url('main.css');
+@import url('thankyou.css');
+@import url('home.css');
 @import url('footer.css');
 
 :root {
@@ -22,11 +23,19 @@ html {
 }
 
 body {
+    height: 100vh;
+
     font-family: 'Geist-light', sans-serif;
 
     color: var(--main-text-color);
     background-color: var(--main-bg-color);
+}
 
+.wrapper {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
 }
 
 body::-webkit-scrollbar {
@@ -35,6 +44,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
     background: var(--second-text-color);
+
 }
 
 body::-webkit-scrollbar-thumb {

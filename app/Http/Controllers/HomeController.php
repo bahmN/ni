@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller {
     public function index() {
@@ -17,15 +18,15 @@ class HomeController extends Controller {
             'parse_mode' => 'markdown',
             'text' => $message,
         ];
-
         $ch = curl_init($website . '/sendMessage');
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_exec($ch);
         curl_close($ch);
 
-        return redirect()->route('home');
+        return redirect()->route('thankyou');
     }
 }

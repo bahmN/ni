@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/sendRequest', [HomeController::class, 'sendRequest']);
+
+Route::get('/thankYou', function () {
+    return view('pages.thankyou');
+})->name('thankyou');
