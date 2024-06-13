@@ -1,11 +1,10 @@
-<header class="header">
-    <div class="header__container">
-        <a href="/"><img src="{{asset('img/logo.svg')}}" alt="logo"></a>
-        <div class="header__container--links">
-            <a href="/">Главная</a>
-            <a href="#about">Обо мне</a>
-            <a href="#stack">Стек</a>
-            <a href="#request">Связаться</a>
-        </div>
+<header>
+    <a href="#"><img class="header_logo" src="{{asset('img/logo.svg')}}" alt="logo"></a>
+    <div class="header_navigation">
+        <a href="#">Главная</a>
+        <a href="#">Обо мне</a>
+        <a href="#">Стек</a>
+        <a href="#">Еще что-то</a>
+        <a href="#">Связаться</a>
     </div>
 </header>

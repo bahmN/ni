@@ -4,20 +4,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{asset('styles/styles.css')}}">
+
     <link rel="icon" href="{{asset('img/logo.ico')}}">
-    <title>NI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{asset('styles/styles.css')}}">
+
+    <title>NIvanaev</title>
 </head>
 
-<body>
-    <div class="wrapper">
-        @include('layouts.header')
-        @yield('content')
-        @include('layouts.footer')
-    </div>
-</body>
 
-<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-<script src="{{asset('scripts/app.js')}}"></script>
+<body>
+    @include('layouts.header')
+    @yield('content')
+    @include('layouts.footer')
+</body>
 
 </html>
