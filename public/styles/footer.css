@@ -1,0 +1,31 @@
+footer {
+    position: relative;
+    height: 40px;
+    background: url(../img/background/footer.png);
+}
+
+.footer__container {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__container p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+.footer__container--links {
+    position: absolute;
+    top: 50%;
+
+    right: 250px;
+    transform: translate(0%, -50%);
+
+    display: flex;
+
+    gap: 15px;
+}

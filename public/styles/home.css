@@ -1,14 +1,33 @@
-main {
-    display: flex;
-    padding: 100px 250px;
-    background-image: url(../img/background/mainBg.png);
+@keyframes running-contour {
+    from {
+        background-position: 0 0, 8px 100%, 0 8px, 100% 0;
+    }
+
+    to {
+        background-position: 8px 0, 0 100%, 0 0, 100% 8px;
+    }
 }
+
+@keyframes running-contour-reverse {
+    from {
+        background-position: 8px 0, 0 100%, 0 0, 100% 8px;
+    }
+
+    to {
+        background-position: 0 0, 8px 100%, 0 8px, 100% 0;
+    }
+}
+
+/* 
+    Greeting Section
+*/
 
 .greeting {
     display: flex;
     flex-direction: column;
+    padding: 100px 250px;
 
-    width: 100%;
+    background-image: url(../img/background/mainBg.png);
 }
 
 .greeting__content {
@@ -34,4 +53,214 @@ main {
     background-color: var(--dark-text-color-opacity);
     border: none;
     border-radius: 3px;
+
+    transition: 0.5s ease-out;
+}
+
+.greeting__button:hover {
+    background-color: var(--highlights-color-opacity);
+}
+
+/* 
+    About Section
+*/
+
+.about {
+    padding: 100px 250px;
+}
+
+.about__content {
+    display: flex;
+    margin-top: 30px;
+
+    gap: 20px;
+}
+
+.about__content_container {
+    width: 360px;
+
+    text-align: center;
+
+    border-radius: 5px;
+    background:
+        linear-gradient(90deg, var(--highlights-color) 50%, transparent 0) repeat-x,
+        linear-gradient(90deg, var(--dark-text-color-opacity) 50%, transparent 0) repeat-x,
+        linear-gradient(0deg, var(--highlights-color) 50%, transparent 0) repeat-y,
+        linear-gradient(0deg, var(--dark-text-color-opacity) 50%, transparent 0) repeat-y;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 10px 2px, 10px 2px, 2px 10px, 2px 10px;
+    animation: running-contour 0.5s linear infinite;
+}
+
+.about__content_container-title {
+    padding: 24px 0px;
+
+    border: none;
+    border-radius: 3px 3px 0px 0px;
+    background-color: black;
+}
+
+.about__content_container-text {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--dark-text-color-opacity);
+}
+
+/*
+    Stack section
+*/
+.stack {
+    display: flex;
+    padding-left: 250px;
+}
+
+.stack h3 {
+    padding: 5px;
+    transform: rotate(-180deg);
+    writing-mode: vertical-lr;
+
+    border: 1px solid var(--dark-text-color);
+    border-radius: 0px 3px 3px 0px;
+}
+
+.stack__content {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    letter-spacing: 25px;
+
+    border-top: 1px solid var(--dark-text-color);
+    border-right: 1px solid var(--dark-text-color);
+    border-bottom: 1px solid var(--dark-text-color);
+
+}
+
+.stack__content h2 {
+    color: var(--dark-text-color);
+}
+
+/*
+    Types of work section
+*/
+
+.typesofwork {
+    padding: 100px 250px;
+}
+
+.typesofwork__content {
+    display: flex;
+    margin-top: 30px;
+
+    gap: 20px;
+}
+
+.typesofwork__content_container {
+    width: 360px;
+
+    text-align: center;
+
+    border-radius: 5px;
+    background:
+        linear-gradient(90deg, var(--highlights-color) 50%, transparent 0) repeat-x,
+        linear-gradient(90deg, var(--dark-text-color) 50%, transparent 0) repeat-x,
+        linear-gradient(0deg, var(--dark-text-color) 50%, transparent 0) repeat-y,
+        linear-gradient(0deg, var(--highlights-color) 50%, transparent 0) repeat-y;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 10px 2px, 10px 2px, 2px 10px, 2px 10px;
+    animation: running-contour 0.5s linear infinite;
+}
+
+.typesofwork__content_container:hover {
+    cursor: pointer;
+
+    background:
+        linear-gradient(90deg, var(--dark-text-color) 50%, transparent 0) repeat-x,
+        linear-gradient(90deg, var(--highlights-color) 50%, transparent 0) repeat-x,
+        linear-gradient(0deg, var(--highlights-color) 50%, transparent 0) repeat-y,
+        linear-gradient(0deg, var(--dark-text-color) 50%, transparent 0) repeat-y;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 10px 2px, 10px 2px, 2px 10px, 2px 10px;
+    animation: running-contour-reverse 0.5s linear infinite;
+}
+
+
+.typesofwork__content_container-title {
+    padding: 24px 0px;
+
+    border: none;
+    border-radius: 3px 3px 0px 0px;
+    background-color: black;
+}
+
+.typesofwork__content_container-text {
+    display: flex;
+    height: 75px;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--dark-text-color-opacity);
+}
+
+/* 
+    Request section
+*/
+
+.contactme {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 30px 250px;
+
+    background: url(../img/background/mainBg2.png);
+}
+
+.contactme__form {
+    display: flex;
+    flex-direction: column;
+    width: 410px;
+    margin: 20px 0px;
+
+    gap: 20px;
+}
+
+.contactme__form input,
+.contactme__form textarea {
+    padding: 10px;
+
+    outline: none;
+    border: none;
+    border-radius: 3px;
+}
+
+.contactme__form p {
+    font-size: 14px;
+    text-align: start;
+}
+
+.contactme__form a {
+    font-size: 13px;
+
+    color: var(--highlights-color);
+}
+
+.contactme__form button {
+    cursor: pointer;
+    padding: 10px;
+
+    border: none;
+    border-radius: 3px;
+    color: var(--light-text-color);
+    background-color: var(--dark-text-color-opacity);
+
+    transition: 0.5s ease-out;
+}
+
+.contactme__form button:hover {
+    background-color: var(--highlights-color-opacity);
 }

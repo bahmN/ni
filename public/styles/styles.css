@@ -8,6 +8,7 @@
     --dark-text-color: #313131;
     --dark-text-color-opacity: rgba(49, 49, 49, 0.7);
     --highlights-color: #F0A731;
+    --highlights-color-opacity: rgba(240, 167, 49, 0.7);
 }
 
 * {
@@ -15,11 +16,28 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'PT Mono', monospace;
 
     color: var(--main-text-color);
     background-color: var(--main-bg-color);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--dark-text-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--highlights-color);
+    /* border-radius: 3px; */
 }
 
 a {
@@ -39,4 +57,16 @@ h1 {
     font-size: 55px;
 
     color: var(--light-text-color);
+}
+
+h2 {
+    font-size: 55px;
+
+    color: var(--highlights-color);
+}
+
+h3 {
+    font-size: 35px;
+
+    color: var(--highlights-color);
 }
