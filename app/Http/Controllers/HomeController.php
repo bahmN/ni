@@ -7,7 +7,45 @@ use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller {
     public function index() {
-        return view('pages.home');
+        $aboutMe = array(
+            [
+                'title' => 'Молодой возраст и энергичность',
+                'text' => 'Готов работать над сложными задачами и учиться новому',
+            ],
+            [
+                'title' => 'Стремление к саморазвитию',
+                'text' => 'Постоянно обучаюсь и совершенствую свои навыки',
+            ],
+            [
+                'title' => 'Гарантия на выполненную работу',
+                'text' => 'Гарантия на выполненную работу не менее 1 месяца',
+            ],
+            [
+                'title' => 'Готовность к переговорам',
+                'text' => 'Цена и сроки могут быть скорректированы в зависимости  от конкретных требований и условий проекта',
+            ],
+        );
+
+        $typesOfWork = array(
+            [
+                'title' => 'Сайт-визитку',
+                'technologies' => 'HTML+CSS+JS',
+            ],
+            [
+                'title' => 'Web-приложение',
+                'technologies' => 'Laravel+MySQL',
+            ],
+            [
+                'title' => 'Интеграции',
+                'technologies' => 'Платежные системы или другие плагины с вашей CMS/CRM системой',
+            ],
+            [
+                'title' => 'Телеграм-бота',
+                'technologies' => 'Laravel+MySQL+Telegram API',
+            ],
+        );
+
+        return view('pages.home', ['aboutMe' => $aboutMe, 'typesOfWork' => $typesOfWork]);
     }
 
     public function sendRequest(Request $request) {
