@@ -42,7 +42,7 @@
 
 
 <section class="typesofwork" id="typesofwork">
-    <h2>Почему стоит заказывать у меня?</h2>
+    <h2>Что можно заказать?</h2>
     <div class="typesofwork__content">
         @if($typesOfWork)
         @foreach($typesOfWork as $item)
@@ -59,11 +59,11 @@
 
 <section class="contactme" id="contactme">
     <h2 class="contactme__title">Оставьте заявку и мы решим вашу задачу!</h2>
-    <form class="contactme__form" method="post">
+    <form class="contactme__form" method="get">
         <input type="text" name="name" placeholder="Имя">
         <input type="text" name="requisites" placeholder="email или telegram">
         <textarea rows="4" cols="38" type="text" name="details" placeholder="Опишите ваш проект..."></textarea>
-        <p>Нажимая на кнопку “Оставить заявку”, вы соглашаетесь с<a href="#"> Политикой обработки персональных данных</a></p>
+        <p>Нажимая на кнопку “Оставить заявку”, вы соглашаетесь с<a href="/policy"> Политикой обработки персональных данных</a></p>
         <button formaction="/sendRequest">Оставить заявку</button>
     </form>
 </section>

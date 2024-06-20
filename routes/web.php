@@ -1,23 +1,11 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PolicyController;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/sendRequest', [HomeController::class, 'sendRequest']);
 
-Route::get('/thankYou', function () {
-    return view('pages.thankyou');
-})->name('thankyou');
+Route::get('/policy', [PolicyController::class, 'index'])->name('policy');

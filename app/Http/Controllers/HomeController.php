@@ -65,6 +65,6 @@ class HomeController extends Controller {
         curl_exec($ch);
         curl_close($ch);
 
-        return redirect()->route('thankyou');
+        return redirect()->route('home');
     }
 }

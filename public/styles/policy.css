@@ -1,0 +1,25 @@
+.policy {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 250px;
+
+    gap: 20px
+}
+
+.policy__content {
+    padding: 35px;
+
+    border: 1px solid var(--dark-text-color);
+    border-radius: 3px;
+}
+
+.policy__content--title {
+    display: flex;
+    justify-content: center;
+}
+
+.policy__content--text {
+    text-align: justify;
+
+    color: var(--dark-text-color);
+}

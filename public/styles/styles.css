@@ -1,6 +1,7 @@
 @import url('normalize.css');
 @import url('header.css');
 @import url('home.css');
+@import url('policy.css');
 @import url('footer.css');
 
 :root {
@@ -37,7 +38,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
     background-color: var(--highlights-color);
-    /* border-radius: 3px; */
+    border-radius: 2px;
 }
 
 a {
@@ -69,4 +70,17 @@ h3 {
     font-size: 35px;
 
     color: var(--highlights-color);
+}
+
+textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: var(--dark-text-color);
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: var(--highlights-color);
+    border-radius: 1px;
 }
