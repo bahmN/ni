@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="greeting" id="aboutme">
+<section class="greeting">
     <div class="greeting__content">
         <h1>Привет, меня зовут Никита <br>Я - <span>backend</span>-разработчик,<br>ну и немного frontend...</h1>
         <img src="{{asset('img/personal.png')}}" alt="personal">
@@ -37,6 +37,7 @@
         <h2>Apache</h2>
         <h2>HTML+CSS+JS</h2>
     </div>
+    <h2 class="stack__title_mobile">мой стек технологий</h2>
     <img src="{{asset('img/background/stack.png')}}" alt="stack">
 </section>
 

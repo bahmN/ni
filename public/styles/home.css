@@ -121,6 +121,7 @@
     padding: 5px;
     transform: rotate(-180deg);
     writing-mode: vertical-lr;
+    text-align: center;
 
     border: 1px solid var(--dark-text-color);
     border-radius: 0px 3px 3px 0px;
@@ -142,6 +143,10 @@
 
 .stack__content h2 {
     color: var(--dark-text-color);
+}
+
+.stack__title_mobile {
+    display: none;
 }
 
 /*
@@ -265,4 +270,116 @@
 
 .contactme__form button:hover {
     background-color: var(--highlights-color-opacity);
+}
+
+@media (max-width: 500px) {
+    .greeting {
+        padding: 50px 25px;
+    }
+
+    .greeting__content {
+        align-items: center;
+    }
+
+    .greeting__content img {
+        height: 100px;
+    }
+
+    .greeting__button {
+        padding: 7px 11px;
+    }
+
+    .about {
+        padding: 50px 25px;
+    }
+
+    .about__content {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .about__content_container {
+        width: 100%;
+    }
+
+    .about__content_container-title {
+        padding: 10px 0;
+    }
+
+    .about__content_container-text {
+        height: 100%;
+        padding: 10px 0;
+    }
+
+    .stack {
+        padding: 0 25px;
+    }
+
+    .stack h3 {
+        border: none;
+        background-color: black;
+    }
+
+    .stack__title_mobile {
+        display: flex;
+        writing-mode: vertical-rl;
+        justify-content: center;
+        padding: 5px;
+
+        background-color: black;
+        border-radius: 0px 3px 3px 0px;
+    }
+
+    .stack__content {
+        padding: 30px 0;
+        text-align: center;
+        width: 100%;
+
+        letter-spacing: 10px;
+
+        border-right: none;
+    }
+
+    .stack__content h2 {
+        font-size: 14px;
+    }
+
+    .stack img {
+        display: none;
+    }
+
+    .typesofwork {
+        padding: 50px 25px;
+    }
+
+    .typesofwork__content {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .typesofwork__content_container {
+        width: 100%;
+
+    }
+
+    .typesofwork__content_container-title {
+        padding: 10px 0;
+    }
+
+    .typesofwork__content_container-text {
+        height: 100%;
+        padding: 10px 0;
+    }
+
+    .contactme {
+        padding: 50px 25px;
+    }
+
+    .contactme__form {
+        width: 100%;
+    }
+
+    .contactme__form p {
+        font-size: 12px;
+    }
 }

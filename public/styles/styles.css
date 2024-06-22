@@ -84,3 +84,18 @@ textarea::-webkit-scrollbar-thumb {
     background-color: var(--highlights-color);
     border-radius: 1px;
 }
+
+@media (max-width: 500px) {
+    a {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 14px;
+    }
+
+    h2,
+    h3 {
+        font-size: 16px;
+    }
+}

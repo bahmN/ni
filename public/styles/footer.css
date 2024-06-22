@@ -29,3 +29,14 @@ footer {
 
     gap: 15px;
 }
+
+@media (max-width:500px) {
+    .footer__container p {
+        display: none;
+    }
+
+    .footer__container--links {
+        position: static;
+        transform: translate(0%, 0%);
+    }
+}

@@ -37,7 +37,7 @@ class HomeController extends Controller {
             ],
             [
                 'title' => 'Интеграции',
-                'technologies' => 'Платежные системы или другие плагины с вашей CMS/CRM системой',
+                'technologies' => 'Платежных систем или другие плагины с вашей CMS/CRM системой',
             ],
             [
                 'title' => 'Телеграм-бота',

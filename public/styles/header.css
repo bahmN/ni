@@ -3,8 +3,7 @@ header {
     justify-content: space-between;
     height: 65px;
 
-    padding-left: 250px;
-    padding-right: 250px;
+    padding: 0 250px;
     /* background-color: var(--dark-text-color); */
     background: url(../img/background/header.png);
 }
@@ -25,4 +24,16 @@ header a {
 
 .header_navigation a:hover {
     color: var(--highlights-color);
+}
+
+@media (max-width: 500px) {
+    header {
+        justify-content: center;
+        padding: 0 25px;
+
+    }
+
+    .header_navigation {
+        display: none;
+    }
 }
