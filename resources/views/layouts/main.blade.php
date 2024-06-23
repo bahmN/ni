@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
 
-    <link type="text/css" href="{{asset('styles/styles.css')}}?<?php echo time(); ?>" rel="stylesheet" />
+    <link type="text/css" href="{{asset('styles/styles.css')}}" rel="stylesheet" />
 
     <title>NIvanaev</title>
 </head>
@@ -22,5 +22,7 @@
     @yield('content')
     @include('layouts.footer')
 </body>
+
+<script src="{{asset('scripts/modal.js')}}"></script>
 
 </html>

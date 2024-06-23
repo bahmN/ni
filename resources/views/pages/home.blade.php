@@ -4,7 +4,7 @@
 
 <section class="greeting">
     <div class="greeting__content">
-        <h1>Привет, меня зовут Никита <br>Я - <span>backend</span>-разработчик,<br>ну и немного frontend...</h1>
+        <h1>Привет, меня зовут Никита <br>Я - <span>backend</span>-разработчик,<br>и немного frontend...</h1>
         <img src="{{asset('img/personal.png')}}" alt="personal">
     </div>
     <div>
@@ -42,18 +42,38 @@
 </section>
 
 
-<section class="typesofwork" id="typesofwork">
+<section class="typesofwork">
     <h2>Что можно заказать?</h2>
     <div class="typesofwork__content">
         @if($typesOfWork)
-        @foreach($typesOfWork as $item)
+        @foreach($typesOfWork as $i=>$item)
 
-        <div class="typesofwork__content_container">
+        <div class="typesofwork__content_container" id="content_container{{$i}}}">
             <p class="typesofwork__content_container-title">{{$item['title']}}</p>
             <p class="typesofwork__content_container-text">{{$item['technologies']}}</p>
         </div>
 
+        <div class="modal" id="modal{{$i}}">
+            <div class="modal__content-header">
+                <h3>{{$item['subtitle']}}</h3>
+                <img src="{{asset('img/close.svg')}}" alt="close" id="close{{$i}}">
+            </div>
+            <div class="modal__content-body">
+                <div class="modal__content-body--section" id="section1">
+                    @foreach($item['description'] as $description)
+                    <p><span>>></span> {{$description}}</p>
+                    @endforeach
+                </div>
+                <div class="modal__content-body--section" id="section2">
+                    @foreach($item['section'] as $s => $section)
+                    <p><span>{{$s+1}}.</span> {{$section}}</p>
+                    @endforeach
+                </div>
+                <h3 class="modal__content-body--stage">Этапы работы</h3>
+            </div>
+        </div>
         @endforeach
+        <div id="overlay"></div>
         @endif
     </div>
 </section>
