@@ -16,10 +16,22 @@
 .policy__content--title {
     display: flex;
     justify-content: center;
+
+    text-align: center;
 }
 
 .policy__content--text {
     text-align: justify;
 
     color: var(--dark-text-color);
+}
+
+@media (max-width: 500px) {
+    .policy {
+        padding: 50px 25px;
+    }
+
+    .policy__content--text {
+        font-size: 14px;
+    }
 }

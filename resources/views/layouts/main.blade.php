@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
 
-    <link type="text/css" href="{{asset('styles/styles.css')}}?v2" rel="stylesheet" />
+    <link type="text/css" href="{{asset('styles/styles.css')}}?<?php echo time(); ?>" rel="stylesheet" />
 
     <title>NIvanaev</title>
 </head>
