@@ -86,14 +86,14 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 500px) {
-    a {
-        font-size: 12px;
-    }
 
-    h1 {
+    a,
+    p {
         font-size: 14px;
     }
 
+
+    h1,
     h2,
     h3 {
         font-size: 16px;

@@ -19,13 +19,11 @@ footer {
 }
 
 .footer__container--links {
+    display: flex;
     position: absolute;
     top: 50%;
-
     right: 250px;
     transform: translate(0%, -50%);
-
-    display: flex;
 
     gap: 15px;
 }

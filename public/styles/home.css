@@ -256,7 +256,6 @@
     position: absolute;
     top: 28px;
     right: 25px;
-
 }
 
 .modal__content-header img:hover {
@@ -465,6 +464,44 @@
     .typesofwork__content_container-text {
         height: 100%;
         padding: 10px 0;
+    }
+
+
+    .modal {
+        width: 300px;
+    }
+
+    .modal__content-header img {
+        top: 15px;
+        right: 40px;
+    }
+
+    .modal__content-body {
+        margin-top: 15px;
+        flex-direction: column;
+    }
+
+    .modal__content-body--section {
+        padding: 10px;
+    }
+
+    #section1 {
+        border-right: 1px solid var(--dark-text-color);
+        border-bottom: none;
+        border-radius: 3px 3px 0 0;
+    }
+
+    #section2 {
+        border-right: 1px solid var(--dark-text-color);
+        border-bottom: none;
+        border-radius: none;
+    }
+
+    .modal__content-body--stage {
+        writing-mode: horizontal-tb;
+        border-radius: 0 0 3px 3px;
+
+        background-color: black;
     }
 
     .contactme {
